@@ -8,7 +8,6 @@ def decrypt_all_candidates(base_dir, key):
         for file in files:
             if file.endswith(".dex") or file.endswith(".bin") or file.endswith(".dat"):
                 full_path = os.path.join(root, file)
-                print(f"[🤔] 후보 파일 발견: {full_path}")
                 
                 try:
                     with open(full_path, 'rb') as f:
@@ -30,6 +29,4 @@ def decrypt_all_candidates(base_dir, key):
 
                 except Exception as e:
                     print(f"[❌] 복호화 실패: {file} → {e}")
-
-    print("[🔚] 복호화된 DEX를 찾지 못했습니다.")
     return False

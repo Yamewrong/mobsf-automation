@@ -14,7 +14,6 @@ def analyze_with_mobsf(apk_path, api_key, mobsf_url="http://127.0.0.1:8000"):
         }
         upload_resp = requests.post(f'{mobsf_url}/api/v1/upload', files=files, headers=headers)
         upload_data = upload_resp.json()
-        print(f"📦 업로드 응답: {upload_data}")
 
     apk_hash = upload_data.get('hash')
     if not apk_hash:
@@ -30,10 +29,11 @@ def analyze_with_mobsf(apk_path, api_key, mobsf_url="http://127.0.0.1:8000"):
     scan_resp = requests.post(f'{mobsf_url}/api/v1/scan', data=scan_data, headers=headers)
     print("🔎 분석 요청 완료")
 
-    # 3. 분석 결과 가져오기 (POST로!)
+    # 3. 분석 결과 가져오기 (최대 20회 재시도)
     report_json_url = f'{mobsf_url}/api/v1/report_json'
     data = {'hash': apk_hash}
 
+    report = None
     for i in range(20):
         time.sleep(1.5)
         report_resp = requests.post(report_json_url, data=data, headers=headers)
@@ -54,4 +54,12 @@ def analyze_with_mobsf(apk_path, api_key, mobsf_url="http://127.0.0.1:8000"):
     with open("report.json", "w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=4)
 
-    print("[✅] 분석 완료! report.json 저장됨")
+    print("[✅] 정적 분석 완료! report.json 저장됨")
+
+    # 5. 동적 분석을 위한 정보 리턴
+    return {
+        "hash": apk_hash,
+        "package_name": report.get("package_name"),
+        "app_name": "My Scan APP - 2.0"
+
+    }
