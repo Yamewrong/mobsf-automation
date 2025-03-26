@@ -29,21 +29,21 @@ APK 분석 및 조작: Apktool, Apksigner
 
 📂 프로젝트 구조
 MobAutoAnalyzer/
-├── 📜 sample.apk                  # 분석 대상 APK
-├── 📜 decoded_apk/                # 디컴파일된 APK 파일
-├── 📜report.json                # 정적 분석 결과 보고서
-├── 📜final_dynamic_report.json  # 동적 분석 결과 보고서
-├── 📜 main.py                     # 전체 자동화 파이프라인 실행 스크립트
-├── 📜 config.py                   # 환경 설정 (API 키 등)
-├── 📜 decompile.py                # APK 디컴파일
-├── 📜 decrypt.py                  # 암호화된 DEX 파일 복호화
-├── 📜 recompile.py                # APK 리패키징
-├── 📜 sign.py                     # APK 재서명
-├── 📜 mobsf.py                    # MobSF 정적 분석 API 호출
-├── 📜 dynamic_analysis.py         # MobSF 동적 분석 API 호출
-├── 📜 activity_starter.py         # 자동 로그인 및 Activity 실행
-├── 📜 frida_hook.py               # Frida 후킹 적용 스크립트
-└── 📜 utils.py                    # 유틸리티 함수 모음 (ADB 등)
+├── 📜 sample.apk                  # 분석 대상 APK  
+├── 📜 decoded_apk/                # 디컴파일된 APK 파일  
+├── 📜report.json                # 정적 분석 결과 보고서  
+├── 📜final_dynamic_report.json  # 동적 분석 결과 보고서  
+├── 📜 main.py                     # 전체 자동화 파이프라인 실행 스크립트  
+├── 📜 config.py                   # 환경 설정 (API 키 등)  
+├── 📜 decompile.py                # APK 디컴파일  
+├── 📜 decrypt.py                  # 암호화된 DEX 파일 복호화  
+├── 📜 recompile.py                # APK 리패키징  
+├── 📜 sign.py                     # APK 재서명  
+├── 📜 mobsf.py                    # MobSF 정적 분석 API 호출  
+├── 📜 dynamic_analysis.py         # MobSF 동적 분석 API 호출  
+├── 📜 activity_starter.py         # 자동 로그인 및 Activity 실행  
+├── 📜 frida_hook.py               # Frida 후킹 적용 스크립트  
+└── 📜 utils.py                    # 유틸리티 함수 모음 (ADB 등)  
 🚀 프로젝트 실행 방법
 1️⃣ 의존성 설치
 ```bash
