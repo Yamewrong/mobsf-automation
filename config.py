@@ -1,2 +1,2 @@
 MOBS_F_URL = "http://127.0.0.1:8000"
-MOBS_F_API_KEY = "8be9d6173cc21a8e60552334050cfe71c02c8e935bdf4b805354b2fe5bc77a0e"
+MOBS_F_API_KEY = "your-api-key"
