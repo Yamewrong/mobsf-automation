@@ -1,3 +1,4 @@
+### sample.apk는 악성코드 샘플입니다 조심조심 ###
 🔐 MobAutoAnalyzer - MobSF 기반 Android 앱 분석 자동화 프로젝트
 
 MobAutoAnalyzer는 Android 앱(APK)의 정적 및 동적 분석을 MobSF와 Frida를 활용하여 자동화한 프로젝트입니다.
