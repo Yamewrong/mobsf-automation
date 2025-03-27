@@ -88,6 +88,6 @@ MobAutoAnalyzer/
 ✅ PostLogin 화면에서 Exported Activity 직접 실행 성공
 
 🙋‍♂️ 개발자
-Cybersecurity Specialist | Security Researcher
-💻 GitHub: https://github.com/Yamewrong
-🛡️ 보안 프로젝트 문의 또는 협업은 언제든지 환영입니다!
+Cybersecurity Specialist | Security Researcher  
+💻 GitHub: https://github.com/Yamewrong  
+🛡️ 보안 프로젝트 문의 또는 협업은 언제든지 환영입니다!  
